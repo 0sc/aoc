@@ -12,7 +12,7 @@ func init() {
 	Solutions["day13"] = day13
 }
 
-var regx = regexp.MustCompile("(\\d+)\\D+(\\d+)")
+var macRegx = regexp.MustCompile("(\\d+)\\D+(\\d+)")
 
 func day13(input string) {
 	var partOne, partTwo int
@@ -35,7 +35,7 @@ func day13(input string) {
 			continue
 		}
 
-		match := regx.FindAllStringSubmatch(line, -1)
+		match := macRegx.FindAllStringSubmatch(line, -1)
 		x := toInt(match[0][1])
 		y := toInt(match[0][2])
 		mac = append(mac, [2]int{x, y})

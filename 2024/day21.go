@@ -50,8 +50,7 @@ func day21(input string) {
 	var codes []string
 	scanner := bufio.NewScanner(in)
 	for scanner.Scan() {
-		line := scanner.Text()
-		codes = append(codes, line)
+		codes = append(codes, scanner.Text())
 	}
 
 	if err := scanner.Err(); err != nil {

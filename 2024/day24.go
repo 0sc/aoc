@@ -89,7 +89,7 @@ func day24(input string) {
 	}
 
 	var partTwo string
-	swaps := repairAdders(maxz, gates)
+	swaps := repairAdders(maxz, gates) // NOTE: doesn't work on all the example input
 	slices.Sort(swaps)
 	partTwo = strings.Join(swaps, ",")
 
